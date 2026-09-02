@@ -1,0 +1,17 @@
+name: Test Suites
+on: [push, pull_request]
+jobs:
+  run-tests:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Run every test suite
+        run: |
+          cd tests
+          for f in *.js; do
+            echo "── $f ──"
+            node "$f"
+          done

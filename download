@@ -1,0 +1,13 @@
+.DS_Store
+Thumbs.db
+.vscode/
+.idea/
+*.swp
+node_modules/
+*.log
+.env
+.env.local
+*.key
+*.pem
+*seed*.txt
+*private*
